@@ -12,21 +12,14 @@ app.get("/", (req, res) => {
     res.sendFile("index.html", { root: "./" });
 })
 
-let mensaje;
+
 // 1. Crear una ruta POST /cancion que reciba los datos correspondientes a una canción y
 // realice a través de una función asíncrona la inserción en la tabla canciones.
 app.post('/cancion', async (req, res) => {
     try {
-        if (!titulo || !artista || !tono) {
-            mensaje = "Debe ingresar todos los campos";
-            res.send(mensaje);
-            console.log("Debe ingresar todos los campos");
-        }
-        else {
-            const { titulo, artista, tono } = req.body;
-            const respuesta = await nuevaCancion(titulo, artista, tono);
-            res.send(respuesta)
-        }
+        const { titulo, artista, tono } = req.body;
+        const respuesta = await nuevaCancion(titulo, artista, tono);
+        res.send(respuesta)
     } catch (error) {
         res.send(error)
     }
