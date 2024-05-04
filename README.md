@@ -48,3 +48,6 @@ de datos.(2 Puntos)
 
 ## Autor
 - Danicsa Calderón - [GitHub](https://github.com/DaniCalderonM)
+
+![jake](https://github.com/DaniCalderonM/Desafio-MiRepertorio/assets/128839529/a50fc22d-bf7b-4efc-af11-5bacc4160bd9)
+
