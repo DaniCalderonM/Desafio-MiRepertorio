@@ -25,7 +25,7 @@ de datos.(2 Puntos)
 ## Instalación 🔧
 1. Clona este repositorio.
 2. Instala las dependencias con npm:
-npm install
+- npm install
 3. Configura las variables de entorno creando un archivo .env en la raíz del proyecto:
 - DB_PASSWORD=TuContraseña
 - DB_USER=TuUsuario
@@ -33,7 +33,7 @@ npm install
 - DB_HOST=TuHost
 - DB_PORT=TuPuerto
 4. Inicia el servidor:
-nodemon server
+- nodemon server
 
 ## Funcionalidades
 - Agregar una nueva canción a la base de datos.
