@@ -17,7 +17,7 @@ const nuevaCancion = async (titulo, artista, tono) => {
             const mensaje = "No se pudo agregar la cancion";
             return mensaje;
         } else {
-            console.log(`La cancion con nombre: ${nombre} agregada correctamente. ${resultado.rows[0]}`);
+            console.log(`La cancion con titulo: ${titulo} agregada correctamente. ${JSON.stringify(resultado.rows[0])}`);
             return resultado.rows[0];
         }
     } catch (error) {
@@ -38,7 +38,7 @@ const verCanciones = async () => {
             const mensaje = "No se encontraron canciones registradas";
             return mensaje;
         } else {
-            console.log(`El registro actual de canciones es ${resultado.rows}`);
+            console.log(`El registro actual de canciones es ${JSON.stringify(resultado.rows)}`);
             return resultado.rows;
         }
     } catch (error) {
@@ -50,7 +50,7 @@ const verCanciones = async () => {
 const editarCancion = async (id, titulo, artista, tono) => {
     try {
         const consulta = {
-            text: `UPDATE ${tabla} SET titulo = $1, artista = $2, tono = $3, WHERE id = $4 RETURNING *`,
+            text: `UPDATE ${tabla} SET titulo = $1, artista = $2, tono = $3 WHERE id = $4 RETURNING *`,
             values: [titulo, artista, tono, id]
         };
         const resultado = await pool.query(consulta);
@@ -60,7 +60,7 @@ const editarCancion = async (id, titulo, artista, tono) => {
             const mensaje = "No se pudo actualizar la cancion, ya que no existe"
             return mensaje;
         } else {
-            console.log(`Cancion con nombre: ${nombre} actualizada correctamente.`);
+            console.log(`Cancion con titulo: ${titulo} actualizada correctamente.`);
             return resultado.rows[0];
         }
     } catch (error) {
