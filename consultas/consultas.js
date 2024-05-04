@@ -6,11 +6,13 @@ let mensaje;
 // Agregar una nueva cancion
 const nuevaCancion = async (titulo, artista, tono) => {
     try {
+        // Validar que ingresen todos los campos, tanto en el formulario como por thunder o postman
         if (!titulo || !artista || !tono) {
             mensaje = "Debe ingresar todos los campos: titulo, artista y tono";
             console.log(mensaje);
             return mensaje;
         } else {
+            // Validar que no exista la cancion en la bbdd
             const consulta = {
                 text: `SELECT * FROM ${tabla} WHERE titulo = $1 AND artista = $2 AND tono = $3`,
                 values: [titulo, artista, tono]
@@ -23,6 +25,7 @@ const nuevaCancion = async (titulo, artista, tono) => {
                 return mensaje;
             }
         }
+
         const consulta = {
             text: ` INSERT INTO ${tabla} (titulo, artista, tono) values ($1, $2, $3) RETURNING *`,
             values: [titulo, artista, tono],
@@ -65,6 +68,7 @@ const verCanciones = async () => {
 // Actualizar una cancion
 const editarCancion = async (id, titulo, artista, tono) => {
     try {
+        //Validar que ingresen todos los campos (si se ejecuta en thunder o en postman)
         if (!id || !titulo || !artista || !tono) {
             mensaje = "Debe ingresar todos los campos id, titulo, artista y tono";
             console.log(mensaje);
@@ -91,6 +95,7 @@ const editarCancion = async (id, titulo, artista, tono) => {
 
 const eliminarCancion = async (id) => {
     try {
+        //Validar que ingresen el campo id (si se ejecuta en thunder o en postman)
         if (!id) {
             mensaje = "Debe ingresar el campo id";
             console.log(mensaje);
