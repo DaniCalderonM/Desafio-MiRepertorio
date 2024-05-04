@@ -24,7 +24,7 @@ de datos.(2 Puntos)
 
 ## Instalación 🔧
 1. Clona este repositorio.
-2. Instala las dependencias con npm:
+2. Instala las dependencias por la terminal con npm:
 - npm install
 3. Configura las variables de entorno creando un archivo .env en la raíz del proyecto:
 - DB_PASSWORD=TuContraseña
