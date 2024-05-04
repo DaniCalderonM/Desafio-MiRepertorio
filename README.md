@@ -32,7 +32,7 @@ de datos.(2 Puntos)
 - DB_DATABASE=NombreDeTuBaseDeDatos
 - DB_HOST=TuHost
 - DB_PORT=TuPuerto
-4. Inicia el servidor:
+4. Inicia el servidor por la terminal:
 - nodemon server
 
 ## Funcionalidades
