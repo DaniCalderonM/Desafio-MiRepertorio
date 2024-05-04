@@ -1,6 +1,6 @@
-#Desafío - Mi Repertorio
+# Desafío - Mi Repertorio
 
-##Descripción
+## Descripción
 La escuela de música “E-Sueño” está motivando a sus estudiantes de canto a presentarse en
 vivo y se puso en contacto con el restaurante del sector para usar su tarima e iniciar un
 calendario de presentaciones. Para conocer y gestionar las canciones que cantarán sus
@@ -10,7 +10,7 @@ En este desafío deberás desarrollar un servidor con Express que utilice el paq
 conectarse con PostgreSQL y utilice funciones asíncronas para hacer las consultas a la base
 de datos.
 
-##Requerimientos
+## Requerimientos
 1. Crear una ruta POST /cancion que reciba los datos correspondientes a una canción y
 realice a través de una función asíncrona la inserción en la tabla canciones.(3 Puntos)
 2. Crear una ruta GET /canciones que devuelva un JSON con los registros de la tabla
@@ -22,7 +22,7 @@ ese registro de la tabla canciones.(3 Puntos)
 realiza una consulta SQL a través de una función asíncrona para eliminarla de la base
 de datos.(2 Puntos)
 
-##Instalación 🔧
+## Instalación 🔧
 1. Clona este repositorio.
 2. Instala las dependencias con npm:
 npm install
@@ -35,16 +35,16 @@ DB_PORT=TuPuerto
 4. Inicia el servidor:
 nodemon server
 
-##Funcionalidades
+## Funcionalidades
 Agregar una nueva canción a la base de datos.
 Ver todas las canciones almacenadas.
 Editar una canción existente.
 Eliminar una canción de la base de datos.
 
-##Tecnologías Utilizadas
+## Tecnologías Utilizadas
 Node.js
 Express
 PostgreSQL
 
-##Autor
+## Autor
 Danicsa Calderón - https://github.com/DaniCalderonM
